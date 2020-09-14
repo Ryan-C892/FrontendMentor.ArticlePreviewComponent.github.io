@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Article preview component</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main>
+<!-- Container -->
+<div class="container">
+  <!-- Inner-Container -->
+  <div class="inner-container">
+    <!-- Row -->
+    <div class="row">
+      <!--Column1-->
+      <div class="column left">
+        <div class="image">
+          <img class="align-self" src="./images/drawers.jpg" alt="">
+        </div>
+      </div>
+      <!--Column2-->
+      <div class="column right">
+        <!-- Inner Content -->
+        <div class="inner-content">
+          <h1 class="text-info">Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home
+          </h1>
+          <p class="text-info">
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I’ve got some simple tips 
+            to help you make any room feel complete.
+          </p>
+          <div class="info">
+            <div class="icon">
+            <img src="images/avatar-michelle.jpg" alt="">
+            </div>
+          </div>
+          <div class="info-name">
+            <p class="name"> Michelle Appleton</p>
+            <p class="date">28 Jun 2020</p>
+          </div>
+          <!-- Share -->
+          <div class="share">
+            <div class="dropdown">
+              <button onclick="myFunction()" class="dropbtn">
+                  <img class="share-icon" src="/images/icon-share.svg" alt="Arrow"> 
+              </button>
+              <ul id="myDropdown" class="dropdown-content">
+                <li>
+                <h2>Share</h2>
+                </li>
+                <li>
+                  <a href="#"><img src="/images/icon-facebook.svg" alt="Facebook Logo"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="/images/icon-twitter.svg" alt="Twitter Logo"></a>
+                </li>
+                <li>
+                  <a href="#"><img src="/images/icon-pinterest.svg" alt="Pinterest Logo"></a>
+                </li>
+                <li>
+                <button onclick="myFunction()" class="dropbtn">
+                  <img class="share-icon" src="/images/icon-share.svg" alt="Arrow"> 
+                </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><!-- Inner Content End -->
+      </div><!-- Column 2 End -->
+    </div><!-- Row End -->
+  </div><!-- Inner Container End -->
+</div><!-- Container End -->
+</main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+<!-- JS -->
+<script>
+  // Shows content when button is active //
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+
+  // Close dropdown if user clicks outside of it //
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn'))
+    {
+      var dropdowns =
+      document.getElementsByClassName("dropdown-content");
+      var i ;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if
+        (openDropdown.classList.contains('show')
+        ) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+</script>
+</body>
+</html>
